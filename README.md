@@ -232,7 +232,6 @@ re-run them:
 | Transimpedance topology removes it (≈100× improvement) | divider_vs_tia |
 | Electrode layer sets the low-frequency limit | electrode_floor |
 | The combined usable frequency window | probe_circuit |
-| Backstop trip point vs. divider value | ngspice sweep, `/sim` |
 
 Simulated with an **idealised op-amp**, so the limits shown are the probe's and
 the cable's rather than the amplifier's. With the real OPA2333 (350 kHz
@@ -251,9 +250,9 @@ mixed-signal board, and every simulation in `/sim` run and re-run by me. It was
 my first mixed-signal layout and I did most of it twice.
 
 **The design decisions were largely not mine**, and I feel that I should be honest about that. I worked through this with
-**Claude (Anthropic)**, which proposed the architecture — the three-tone
+**Claude (Anthropic)**, which proposed the architecture - the three-tone
 excitation scheme, the transimpedance front end, the switched gain ranges, the 
-calibration channels, the backstop and the board floorplan, recommended the component families, 
+calibration channels, and the backstop - recommended the component families, 
 wrote the LTspice exercises I learned to simulate from, 
 and wrote this documentation.
 
