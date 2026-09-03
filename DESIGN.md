@@ -24,9 +24,8 @@ with it.
 12. [Verification: what was checked and how](#12-verification-what-was-checked-and-how)
 13. [Open items](#13-open-items)
 14. [Decisions that changed, and why](#14-decisions-that-changed-and-why)
-15. [Bill of materials](#15-bill-of-materials)
-16. [Net list](#16-net-list)
-17. [References](#17-references)
+15. [Net list](#16-net-list)
+16. [References](#17-references)
 
 ---
 
