@@ -13,7 +13,7 @@ circuit itself is generic and would suit any multi-enclosure system.
 Design study. Ninety parts, five schematic sheets, four-layer board. Simulated
 and netlist-validated. **Never built** — see [Open items](#open-items).
 
-![3D View](docs/img/3d-view-top.png)
+![3D View](3d-view-top.png)
 *3D View*
 
 ---
