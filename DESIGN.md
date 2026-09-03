@@ -703,7 +703,7 @@ of two more penetrator conductors per enclosure and four more TVS.
 ```
    J5.1 ──► +5V_IN ──► Q1 ──► +5V ──┬──► U4 LDO ──► +3V3 ──► FB1 ──► 3V3_ADC
                     reverse         │
-                    protection      └──► backstop (own branch from a star point)
+                    protection      └──► backstop 
 ```
 
 ### 7.1 Reverse polarity protection

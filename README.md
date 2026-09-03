@@ -245,20 +245,20 @@ ranges — that's Open item 2.
 This project was a way to further my experience with ECAD, as well as learn how analog design decisions get made.
 
 The schematic capture, the PCB layout and the LTspice work are mine, and that's
-where most of the hours went. Ninety parts across five sheets, a four-layer
-mixed-signal board, and every simulation in `/sim` run and re-run by me. It was
-my first mixed-signal layout and I did most of it twice.
+where most of the hours went. Almost a hundred parts across five sheets, a four-layer
+mixed-signal board, and every simulation in `/sim` run by me. 
 
 **The design decisions were largely not mine**, and I feel that I should be honest about that. I worked through this with
 **Claude (Anthropic)**, which proposed the architecture - the three-tone
 excitation scheme, the transimpedance front end, the switched gain ranges, the 
-calibration channels, and the backstop - recommended the component families, 
+calibration channels, and the backstop - recommended the component families (verified by me), 
 wrote the LTspice exercises I learned to simulate from, 
 and wrote this documentation.
 
 
 I haven't taken the advanced analog electronics sequence yet, but I feel that this was a good start into analog design.
-I'd do a good deal of this differently now, which is more or less the point of having done it.
+It wasn't my most refined project, and I do think I could have owned more of the design itself,
+but it definitely motivated me to independently explore analog electronics further.
 
 Also thank you to **[Altium Academy](https://www.youtube.com/@AltiumAcademy)**, whose
 mixed-signal layout videos were very helpful, and to the **KiCad** project, whose libraries 
