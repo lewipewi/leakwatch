@@ -9,7 +9,7 @@ Designed with the [Blue Robotics](https://bluerobotics.com/) BlueROV2 in mind �
 a Navigator flight controller, I²C, and JST-GH connectors. The
 circuit itself is generic and would suit any multi-enclosure system.
 
-Design study. Ninety parts, five schematic sheets, four-layer board. Simulated
+Design study. Almost 100 parts, five schematic sheets, four-layer board. Simulated
 and netlist-validated. **Never built** — see [Open items](#open-items).
 
 ![3D View](3d-view-top.png)
