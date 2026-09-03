@@ -1,0 +1,224 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "326bdad9-59af-48f8-b46d-261f37eb3279")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 246.38 118.11)
+		(size 13.97 21.59)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "28565432-dae8-4b2e-849c-208e578358c9")
+		(property "Sheetname" "frontend"
+			(at 246.38 117.3984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "frontend.kicad_sch"
+			(at 246.38 140.2846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "leak_sensor"
+				(path "/326bdad9-59af-48f8-b46d-261f37eb3279"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 229.87 147.32)
+		(size 30.48 13.97)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "4cde0668-5166-4e87-90bf-6f7cadd0d542")
+		(property "Sheetname" "io"
+			(at 229.87 146.6084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "io.kicad_sch"
+			(at 229.87 161.8746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "leak_sensor"
+				(path "/326bdad9-59af-48f8-b46d-261f37eb3279"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 215.9 96.52)
+		(size 12.7 16.51)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "d0c63039-3519-4872-a801-313384190c78")
+		(property "Sheetname" "power"
+			(at 215.9 95.8084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at 215.9 113.6146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "leak_sensor"
+				(path "/326bdad9-59af-48f8-b46d-261f37eb3279"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 246.38 71.12)
+		(size 21.59 31.75)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "d38a6cb4-c813-4bee-ad27-2bed8efc4425")
+		(property "Sheetname" "mcu"
+			(at 246.38 70.4084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "untitled.kicad_sch"
+			(at 246.38 103.4546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "leak_sensor"
+				(path "/326bdad9-59af-48f8-b46d-261f37eb3279"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 212.09 72.39)
+		(size 20.32 11.43)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "e79ddeaf-3c06-4fdd-8abf-8779f6b30693")
+		(property "Sheetname" "backstop"
+			(at 212.09 71.6784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "backstop.kicad_sch"
+			(at 212.09 84.4046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "leak_sensor"
+				(path "/326bdad9-59af-48f8-b46d-261f37eb3279"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
