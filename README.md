@@ -55,7 +55,7 @@ electronics tube is a lost vehicle. Right now both raise the same alarm.
 
 It's also worth being clear about what already exists: every BlueROV2 ships with
 a hand vacuum pump, and pulling ~15 inHg and watching it for 10–15 minutes is a
-genuinely good pre-dive seal check. But the vacuum is released before the vehicle
+good pre-dive seal check. But the vacuum is released before the vehicle
 enters the water, so nothing monitors the seal during the dive. **This board
 addresses the second gap, not the first.**
 
@@ -164,28 +164,6 @@ This has never been built or tested. The full list is in
 | Anti-alias filter vs. ADC sample rate | The corner frequency was never chosen against an actual sample rate |
 | Electrode material and geometry | Unspecified, and it's what sets the values the whole frequency analysis rests on |
 | Interference from nearby motor drives | Not analysed |
-
----
-
-## What I learned
-
-The thing I'd tell myself at the start: **almost every component was a
-countermeasure to a specific physical problem, and I didn't know what most of
-those problems were until I'd already drawn the circuit wrong once.**
-
-Concretely:
-
-- Simulating before drawing schematics would have saved weeks. The frequency
-  window result reshaped the entire architecture, and I found it in LTspice, not
-  on paper.
-- Generating the netlist from a single validated source file was the best
-  decision in the project. It caught real errors the moment I merged two sheets —
-  including two nets that were secretly the same node.
-- Validation catches *topology*, not *intent*. I once changed a supply rail from
-  5 V to 3.3 V by accident; every pin was still connected, the checker was happy,
-  and the error only surfaced when the arithmetic downstream stopped making sense.
-- Splitting a ground plane to "isolate" analog from digital is the intuitive move
-  and the wrong one.
 
 ---
 
