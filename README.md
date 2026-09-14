@@ -223,8 +223,7 @@ ranges — that's Open item 2.
 This project was a way to further my experience with ECAD, as well as learn how analog design decisions get made.
 
 The schematic capture, the PCB layout and the LTspice work are mine, and that's
-where most of the hours went. Almost a hundred parts across five sheets, a four-layer
-mixed-signal board, and every simulation in `/sim` run by me. 
+where most of the hours went. 
 
 **The design decisions were largely not mine**, and I feel that I should be honest about that. I worked through this with
 **Claude (Anthropic)**, which proposed the architecture - the three-tone
