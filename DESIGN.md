@@ -10,8 +10,7 @@ still wrong with it.
 
 ## 0. Who did what
 
-This project was a way to learn two things at once: how to actually drive ECAD
-tools, and how analog design decisions get made. Being precise about the split
+This project was a way to accomplish two things at once: advancing my KiCad skills, and learn how analog design decisions get made. Being precise about the split
 matters more than looking good, so:
 
 **Mine.** Schematic capture in KiCad — five hierarchical sheets, ninety parts —
@@ -24,7 +23,7 @@ this here" question that changed the design.
 lines in `AP_LeakDetector`. Proposed the whole architecture: the three-tone
 excitation scheme, the transimpedance front end, the four switched gain ranges,
 the calibration channels, the independent hardware backstop, and the board
-floorplan. Recommended the component families. **Ran all of the LTspice
+floorplan. Recommended the component families. **Ran the LTspice
 simulation work**, including the frequency-window analysis the architecture rests
 on. Wrote the netlist validator and this documentation.
 
@@ -32,10 +31,6 @@ The useful part was the gap between those two. You cannot lay out a board withou
 knowing why every part on it is there, so getting from the architecture to a
 finished board meant asking why, repeatedly. Occasionally the answer didn't
 survive contact.
-
-I have not taken the advanced analog electronics sequence yet. There is a companion
-document, `LEARNING.md`, which is the version of this written to teach me the
-concepts rather than to present them.
 
 ---
 
@@ -223,7 +218,7 @@ exactly the high-frequency limit from §2.2, brought inside the board.
 A **transimpedance amplifier** instead holds its summing node at a fixed
 potential (VMID) and measures the *current* flowing into it. Because that node
 never moves, the capacitance to ground on it never charges. The bandwidth
-penalty from cable capacitance largely disappears: **965 Hz → 108 kHz** in
+penalty from cable capacitance largely disappears: **965 Hz → 20 kHz** in
 simulation.
 
 Op-amp is the **OPA2333** — chopper-stabilised, microvolt-level offset, which
@@ -253,9 +248,6 @@ signal that swings both ways has nowhere to go. **VMID is a buffered 1.65 V
 reference that the analog section treats as zero.** A signal at 1.9 V is
 "positive," 1.4 V is "negative." Everything analog references VMID, not ground.
 
-This is also why the guard ring on the layout is tied to VMID rather than ground
-(§8.4) — a guard has to sit at the same potential as the node it protects, or it
-becomes a leakage path itself.
 
 ### 4.6 Anti-alias filter
 
@@ -286,9 +278,9 @@ powered from **+5 V upstream of the LDO**, so a regulator failure that kills the
   thresholds, so the RC charges to the upper one, flips, discharges to the lower,
   flips back, forever. Three parts, no crystal, no code.
 - **DC block** — same reasoning as §4.1, zero average current through the water.
-- **Divider** — the probe forms the lower leg against 3.3 kΩ. As the probe wets,
-  its resistance falls and the AC amplitude at the tap falls with it. Trip point
-  lands around **2.3 kΩ** of probe resistance.
+- **Divider** — the probe forms the uper leg against 3.3 kΩ. As the probe wets,
+  its resistance falls and the AC amplitude at the tap increases. Trip point
+  lands around 2k of probe resistance.
 - **Peak detector** — BAT54W and a capacitor turn the AC amplitude into a slowly
   decaying DC level, holding roughly 100 ms, so the comparator sees a steady
   voltage instead of a waveform.
@@ -416,7 +408,7 @@ What was actually checked, and by what means:
 | Component pinouts | Read against manufacturer datasheets, symbol by symbol | Me |
 | Netlist connectivity | Python validator over the 90-part / 82-net definition | Claude |
 | Frequency-window argument | LTspice sweeps | Claude |
-| TIA bandwidth claim | LTspice, 965 Hz → 108 kHz | Claude |
+| TIA bandwidth claim | LTspice, 965 Hz → 20k kHz | Claude |
 | Backstop trip point | LTspice | Claude |
 | Layout rules | KiCad DRC, plus manual review against mixed-signal practice | Me |
 
@@ -473,6 +465,4 @@ Ranked by how much they would hurt.
 
 ---
 
-*Design study. Not fabricated. See `LEARNING.md` for the concepts behind each
-decision, `COMPONENTS.md` for the parts, and `DESIGN-FULL.md` for the long
-version of this document.*
+
