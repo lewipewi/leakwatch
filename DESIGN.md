@@ -31,11 +31,9 @@ on. Wrote the netlist validator and this documentation.
 The useful part was the gap between those two. You cannot lay out a board without
 knowing why every part on it is there, so getting from the architecture to a
 finished board meant asking why, repeatedly. Occasionally the answer didn't
-survive contact — the multiplexer topology in §5.4 is in its current form because
-I asked whether it had ever been checked against a reference design, and it
-hadn't.
+survive contact.
 
-I have not taken the analog electronics sequence yet. There is a companion
+I have not taken the advanced analog electronics sequence yet. There is a companion
 document, `LEARNING.md`, which is the version of this written to teach me the
 concepts rather than to present them.
 
@@ -381,19 +379,7 @@ radiates and picks up.
 **One solid, unbroken In1 ground.** Separation comes from distance and from
 placement discipline, not from cutting copper.
 
-### 8.4 Guard ring at VMID
-
-The TIA summing node is a high-impedance node where the currents of interest can
-be picoamps. Surface leakage across the board — flux residue, humidity — can
-exceed them. A guard ring is a ring of copper around that node held at the *same
-potential* as the node, so there is no voltage across the leakage path and
-therefore no leakage current.
-
-It is tied to **VMID, not ground**, because VMID is what the summing node sits
-at. Grounding the guard would guarantee 1.65 V across exactly the gap it is meant
-to protect.
-
-### 8.5 Other layout rules applied
+### 8.4 Other layout rules applied
 
 - SHT45 on a thermal island, slotted, away from the LDO.
 - Analog nets (the summing node in particular) do not take vias; a via is a stub
