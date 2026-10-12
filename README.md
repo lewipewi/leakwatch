@@ -173,7 +173,6 @@ This has never been built or tested. The full list is in
   /schematics     KiCad schematics, 5 sheets, plus PDFs
   /pcb            KiCad layout, 4 layers, renders
   /sim            LTspice files for the front end and backstop
-  /netlist        design.py — single source of truth, validates the netlist
   DESIGN.md       full design document, every decision and why
 ```
 
@@ -198,31 +197,11 @@ Several are assumptions.
 |---|---|---|
 | Probe cable capacitance | 200 pF | Estimate. [TI, *A Practical Guide to Cable Selection* (SNLA164)](https://www.ti.com/lit/an/snla164/snla164.pdf) cites **12–16 pF/ft (≈39–52 pF/m)** mutual capacitance for low-capacitance twisted pair. 200 pF corresponds to roughly a 4 m run, or less for ordinary PVC-insulated pairs. **Assumption, not a measurement of a specific cable** |
 
-
-### Simulated results
-
-These came from my own LTspice work, and the files are in `/sim` so you can
-re-run them:
-
-| Result | Where |
-|---|---|
-| Cable capacitance sets the high-frequency limit | cable_ceiling |
-| Transimpedance topology removes it (≈100× improvement) | divider_vs_tia |
-| Electrode layer sets the low-frequency limit | electrode_floor |
-| The combined usable frequency window | probe_circuit |
-
-Simulated with an **idealised op-amp**, so the limits shown are the probe's and
-the cable's rather than the amplifier's. With the real OPA2333 (350 kHz
-gain-bandwidth) the amplifier becomes a limit of its own on the high gain
-ranges — that's Open item 2.
-
----
-
 ## How this was made
 
 This project was a way to further my experience with ECAD, as well as learn how analog design decisions get made.
 
-The schematic capture, the PCB layout and the LTspice work are mine, and that's
+The schematic capture and the PCB layout work are mine, and that's
 where most of the hours went. 
 
 **The design decisions were largely not mine**, and I feel that I should be honest about that. I worked through this with
